@@ -1,6 +1,6 @@
 # habit_buddy
 
-A new Flutter application.
+Flutter application for my master thesis.
 
 ## Getting Started
 
