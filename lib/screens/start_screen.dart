@@ -5,6 +5,7 @@ import 'package:habit_buddy/screens/example_habit.dart';
 import 'package:habit_buddy/screens/friends.dart';
 
 class StartScreen extends StatefulWidget {
+  static const String id = 'start_screen';
   @override
   _StartScreenState createState() => _StartScreenState();
 }

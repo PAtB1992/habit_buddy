@@ -6,7 +6,7 @@ import 'package:habit_buddy/constants.dart';
 import 'package:habit_buddy/components/emotes.dart';
 
 class Friends extends StatelessWidget {
-  Friends();
+  static const String id = 'friends';
 
   @override
   Widget build(buildContext) {

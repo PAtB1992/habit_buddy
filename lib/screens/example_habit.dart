@@ -3,7 +3,7 @@ import 'package:habit_buddy/components/reusable_card.dart';
 import 'package:habit_buddy/screens/example_habit.dart';
 
 class ExampleHabit extends StatelessWidget {
-  ExampleHabit();
+  static const String id = 'example_habit';
 
   @override
   Widget build(BuildContext) {
