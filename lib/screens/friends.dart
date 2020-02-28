@@ -3,7 +3,7 @@ import 'package:habit_buddy/components/friend_card.dart';
 import 'package:habit_buddy/components/motivation_streak.dart';
 import 'package:habit_buddy/components/reusable_card.dart';
 import 'package:habit_buddy/constants.dart';
-import 'package:habit_buddy/components/emotes.dart';
+import 'package:habit_buddy/components/emotes_button.dart';
 
 class Friends extends StatelessWidget {
   static const String id = 'friends';
@@ -30,16 +30,11 @@ class Friends extends StatelessWidget {
             friendAvatar: 'images/bot1.png',
             friendName: 'The Forbidden Flute',
           ),
-          EmoteButtons(),
-          Divider(
-            height: 3,
-            color: Colors.white,
+          EmoteButtons(
+            title: 'Gut gemacht!',
+            color: Colors.blue[800],
+            onPressed: null,
           ),
-          FriendCard(
-            friendAvatar: 'images/bot2.png',
-            friendName: 'The Brain Art',
-          ),
-          EmoteButtons(),
           Divider(
             height: 3,
             color: Colors.white,
