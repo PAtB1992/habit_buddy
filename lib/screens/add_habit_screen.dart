@@ -10,8 +10,9 @@ class AddHabit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 60),
+//        padding: EdgeInsets.only(top: 60),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
               'Add Goal',

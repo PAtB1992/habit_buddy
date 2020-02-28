@@ -19,8 +19,8 @@ class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.redAccent,
         onPressed: () {
 //          Provider.of<GoalData>(context, listen: false).addGoal('Test');
           Navigator.pushNamed(
@@ -28,7 +28,6 @@ class _StartScreenState extends State<StartScreen> {
             AddHabit.id,
           );
         },
-        backgroundColor: Colors.lightBlueAccent,
         child: Icon(Icons.add),
       ),
       body: Column(
@@ -45,7 +44,7 @@ class _StartScreenState extends State<StartScreen> {
                   child: Icon(
                     Icons.child_care,
                     size: 30.0,
-                    color: Colors.lightBlueAccent,
+                    color: Colors.redAccent,
                   ),
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -64,27 +63,42 @@ class _StartScreenState extends State<StartScreen> {
               ],
             ),
           ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              ReusableCard(
+                color: Colors.redAccent,
+                onPress: () {
+                  Navigator.pushNamed(context, Friends.id);
+                },
+                cardChild: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text(
+                      'Tanke Motivation mit deinen Habit Buddies!',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Hero(
+                      tag: 'icon',
+                      child: Icon(
+                        Icons.child_care,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 25,
+          ),
           Container(
-            padding: EdgeInsets.all(10.0),
+            padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             color: Colors.white,
             child: Text(
-                'Derzeit verfolgst Du ${Provider.of<GoalData>(context).goalCount} Ziele, bleib dran!'),
+                'Derzeit verfolgst Du ${Provider.of<GoalData>(context).goalCount} Ziele, bleib dran und wachse an Dir!'),
           ),
-//          ReusableCard(
-//            onPress: () {
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(
-//                  builder: (context) => Friends(),
-//                ),
-//              );
-//            },
-//            color: Colors.blue[800],
-//            cardChild: Padding(
-//              padding: const EdgeInsets.all(8.0),
-//              child: Text('My Habit Buddies'),
-//            ),
-//          ),
           Expanded(
             child: Container(
               color: Colors.white,

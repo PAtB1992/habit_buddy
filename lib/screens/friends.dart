@@ -11,33 +11,41 @@ class Friends extends StatelessWidget {
   @override
   Widget build(buildContext) {
     return Scaffold(
-      backgroundColor: Colors.blue[600],
-      appBar: AppBar(
-        backgroundColor: Colors.black26,
-        title: Text('Your Habit Buddies'),
-      ),
       body: Column(
-//        TODO Listview keine column
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+//          Header
           Container(
-            child: Text(
-              'Share your experiences and motivate each other via emotes!',
-              style: kFriendTextStyle,
+            color: Colors.lightBlueAccent,
+            padding: EdgeInsets.only(
+                top: 35.0, left: 30.0, right: 30.0, bottom: 15.0),
+            child: Row(
+              children: <Widget>[
+                CircleAvatar(
+                  child: Hero(
+                    tag: 'icon',
+                    child: Icon(
+                      Icons.child_care,
+                      size: 30.0,
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                  backgroundColor: Colors.white,
+                  radius: 30.0,
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'Deine Habit Buddies',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            margin: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-          ),
-          FriendCard(
-            friendAvatar: 'images/bot1.png',
-            friendName: 'The Forbidden Flute',
-          ),
-          EmoteButtons(
-            title: 'Gut gemacht!',
-            color: Colors.blue[800],
-            onPressed: null,
-          ),
-          Divider(
-            height: 3,
-            color: Colors.white,
           ),
         ],
       ),
