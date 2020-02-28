@@ -9,10 +9,13 @@ class GoalsList extends StatelessWidget {
     return Consumer<GoalData>(
       builder: (context, goalData, child) {
         return ListView.builder(
+          padding: EdgeInsets.all(0),
           itemBuilder: (context, index) {
             final goal = goalData.goals[index];
             return GoalTile(
               goalTitle: goal.name,
+              repetitions: goal.repetitions,
+              goalIcon: goal.goalIcon,
             );
           },
           itemCount: goalData.goalCount,

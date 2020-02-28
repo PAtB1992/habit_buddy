@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class GoalTile extends StatelessWidget {
   final String goalTitle;
   final Function onPress;
+  final int repetitions;
+  final IconData goalIcon;
 
-  GoalTile({this.goalTitle, this.onPress});
+  GoalTile({this.goalTitle, this.onPress, this.repetitions, this.goalIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class GoalTile extends StatelessWidget {
           children: <Widget>[
             Text(
               goalTitle,
-              style: TextStyle(color: Colors.white, fontSize: 17.0),
+              style: TextStyle(color: Colors.white, fontSize: 20.0),
             ),
             SizedBox(
               height: 10.0,
@@ -24,9 +26,19 @@ class GoalTile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Text('Fortschritt'),
-                Text('Symbol'),
-                Text('Statistik'),
+                Text(
+                  'Wiederholungen: $repetitions',
+                  style: TextStyle(color: Colors.white),
+                ),
+                Icon(
+                  goalIcon,
+                  color: Colors.white,
+                  size: 60.0,
+                ),
+                Text(
+                  'Statistik',
+                  style: TextStyle(color: Colors.white),
+                ),
               ],
             ),
           ],

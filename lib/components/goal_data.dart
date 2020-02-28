@@ -6,8 +6,8 @@ import 'package:habit_buddy/components/goal.dart';
 
 class GoalData extends ChangeNotifier {
   List<Goal> _goals = [
-    Goal(name: 'Mastering the flute'),
-    Goal(name: 'Practice Stoneskipping'),
+    Goal(name: 'Mastering the flute', goalIcon: Icons.music_note),
+    Goal(name: 'Practice Stoneskipping', goalIcon: Icons.filter_hdr),
   ];
 
 //Enables to work with parameter "goals" without having to write "_goals"

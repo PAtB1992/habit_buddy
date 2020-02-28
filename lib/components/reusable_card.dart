@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({@required this.color, this.cardChild, this.onPress});
+  ReusableCard({this.color, this.cardChild, this.onPress, this.borderColor});
   final Color color;
+  final Color borderColor;
   final Widget cardChild;
   final Function onPress;
 
@@ -11,11 +12,13 @@ class ReusableCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
+        padding: EdgeInsets.all(12),
         child: cardChild,
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(10.0),
+//          border: Border.all(width: 1, color: borderColor),
         ),
       ),
     );
