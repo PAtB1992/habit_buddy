@@ -10,17 +10,30 @@ class EmoteButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        elevation: 5.0,
-        color: color,
-        borderRadius: BorderRadius.circular(30.0),
-        child: MaterialButton(
-          onPressed: onPressed,
-          minWidth: 200.0,
-          height: 42.0,
-          child: Text(
-            title,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
+      child: RaisedButton(
+        padding: EdgeInsets.all(0),
+        onPressed: null,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(80),
+        ),
+        child: Ink(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.blueAccent, Colors.lightBlueAccent],
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Container(
+            constraints: BoxConstraints(maxWidth: 200, minHeight: 50),
+            alignment: Alignment.center,
+            child: Text(
+              title,
+              textAlign: TextAlign.center,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+            ),
           ),
         ),
       ),

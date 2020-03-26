@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "995120271115",
+    "firebase_url": "https://habit-buddy-f79b1.firebaseio.com",
+    "project_id": "habit-buddy-f79b1",
+    "storage_bucket": "habit-buddy-f79b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995120271115:android:0880ff3d8d4961c3fddc0e",
+        "android_client_info": {
+          "package_name": "com.patrickschwarz.habit_buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995120271115-v3sm760i2ehcl2fv821587158ud3rn27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxhNiCqgJoeF___GK7g6llMRdsXzE32uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995120271115-v3sm760i2ehcl2fv821587158ud3rn27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

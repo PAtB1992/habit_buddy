@@ -8,14 +8,14 @@ import 'package:habit_buddy/constants.dart';
 import 'package:habit_buddy/screens/habit_screen.dart';
 import 'package:habit_buddy/screens/friends.dart';
 
-class StartScreen extends StatefulWidget {
-  static const String id = 'start_screen';
+class HomeScreen extends StatefulWidget {
+  static const String id = 'home_screen';
   @override
-  _StartScreenState createState() => _StartScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
 //TODO use hero animation for buddy icon
-class _StartScreenState extends State<StartScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _StartScreenState extends State<StartScreen> {
         children: <Widget>[
 //          Header
           Container(
-            color: Colors.lightBlueAccent,
+            color: Colors.lightBlue,
             padding: EdgeInsets.only(
                 top: 60.0, left: 30.0, right: 30.0, bottom: 30.0),
             child: Row(
@@ -75,7 +75,7 @@ class _StartScreenState extends State<StartScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Text(
-                      'Tanke Motivation mit deinen Habit Buddies!',
+                      'Motiviere Dich und Deine Habit Buddies!',
                       style: TextStyle(color: Colors.white),
                     ),
                     Hero(

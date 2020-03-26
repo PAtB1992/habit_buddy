@@ -45,7 +45,7 @@ class GoalTile extends StatelessWidget {
         ),
         margin: EdgeInsets.all(15.0),
         decoration: BoxDecoration(
-          color: Colors.lightBlueAccent,
+          color: Colors.lightBlue,
           borderRadius: BorderRadius.circular(10.0),
         ),
       ),

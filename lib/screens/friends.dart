@@ -16,7 +16,7 @@ class Friends extends StatelessWidget {
         children: <Widget>[
 //          Header
           Container(
-            color: Colors.lightBlueAccent,
+            color: Colors.lightBlue,
             padding: EdgeInsets.only(
                 top: 35.0, left: 30.0, right: 30.0, bottom: 15.0),
             child: Row(
@@ -27,10 +27,10 @@ class Friends extends StatelessWidget {
                     child: Icon(
                       Icons.child_care,
                       size: 30.0,
-                      color: Colors.redAccent,
+                      color: Colors.white,
                     ),
                   ),
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.redAccent,
                   radius: 30.0,
                 ),
                 SizedBox(
@@ -46,6 +46,14 @@ class Friends extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Column(
+            children: <Widget>[
+              SizedBox(
+                height: 20,
+              ),
+              FriendCard(),
+            ],
           ),
         ],
       ),

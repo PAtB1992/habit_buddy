@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:habit_buddy/constants.dart';
 import 'package:habit_buddy/components/motivation_streak.dart';
+import 'package:habit_buddy/components/emotes_button.dart';
 
 class FriendCard extends StatelessWidget {
   FriendCard({@required this.friendAvatar, this.onPress, this.friendName});
@@ -13,38 +14,70 @@ class FriendCard extends StatelessWidget {
   Widget build(BuildContext context) {
 //    TODO remove gesture detector?
     return Container(
-      margin: EdgeInsets.fromLTRB(20, 20, 0, 2),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          CircleAvatar(
-            child: CircleAvatar(
-              backgroundImage: AssetImage(friendAvatar),
-              radius: 38,
+        margin: EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            CircleAvatar(
+              child: Image.asset('images/bot1.png'),
+              backgroundColor: Colors.transparent,
+              radius: 60,
             ),
-            radius: 40,
-            backgroundColor: Colors.white,
-          ),
-          Column(
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.fromLTRB(8.0, 8, 0, 8),
-                child: Text(
-                  friendName,
-                  style: kLabelTextStyle,
-                ),
-                margin: EdgeInsets.fromLTRB(15.0, 15, 0, 0),
-                decoration: BoxDecoration(
-                  border: Border.all(width: 2.0, color: Colors.white),
-                  color: Colors.blue[800],
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
+            Text(
+              'The Forbidden Flute',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w400),
+            ),
+            MotivationStreak(),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              width: 180,
+              child: Divider(
+                thickness: 0.6,
+                indent: 5,
+                endIndent: 5,
+                color: Colors.lightBlueAccent,
               ),
-              MotivationStreak(),
-            ],
-          ),
-        ],
-      ),
-    );
+            ),
+            Text(
+              'Heute fühlte sich dein Habit Buddy beim Erfüllen seiner Ziele nicht so gut.',
+              textAlign: TextAlign.center,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Flexible(
+                  child: Column(
+                    children: <Widget>[
+                      EmoteButtons(
+                        onPressed: null,
+                        title: 'Weiter so!',
+                      ),
+                      EmoteButtons(
+                        onPressed: null,
+                        title: 'Erinnere dich, warum du gestartet hast!',
+                      ),
+                    ],
+                  ),
+                ),
+                Flexible(
+                  child: Column(
+                    children: <Widget>[
+                      EmoteButtons(
+                        onPressed: null,
+                        title: 'Du motivierst mich!',
+                      ),
+                      EmoteButtons(
+                        onPressed: null,
+                        title: 'Gib jetzt nicht auf!',
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )
+          ],
+        ));
   }
 }

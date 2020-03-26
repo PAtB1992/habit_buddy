@@ -11,14 +11,15 @@ class _MotivationStreakState extends State<MotivationStreak> {
 //  TODO extensible list
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Icon(Icons.favorite, color: Colors.pink),
-        Icon(Icons.favorite, color: Colors.pink),
-        Icon(Icons.favorite, color: Colors.pink),
         Text(
-          'Motivation streak!',
-          style: kFriendTextStyle,
-        )
+          'Motivation Level:',
+          style: TextStyle(fontSize: 15),
+        ),
+        Icon(Icons.favorite, color: Colors.redAccent),
+        Icon(Icons.favorite, color: Colors.redAccent),
+        Icon(Icons.favorite, color: Colors.redAccent),
       ],
     );
   }
