@@ -14,7 +14,6 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-//TODO use hero animation for buddy icon
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {

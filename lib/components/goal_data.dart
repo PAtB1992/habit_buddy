@@ -21,8 +21,8 @@ class GoalData extends ChangeNotifier {
   }
 
 //Adds a new goal to the list
-  void addGoal(String newGoalTitle) {
-    final goal = Goal(name: newGoalTitle);
+  void addGoal(String newGoalTitle, newGoalDescription) {
+    final goal = Goal(name: newGoalTitle, description: newGoalDescription);
     _goals.add(goal);
     notifyListeners();
   }

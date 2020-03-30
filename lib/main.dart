@@ -10,6 +10,7 @@ import 'screens/add_habit_screen.dart';
 import 'screens/welcome_screen.dart';
 import 'screens/registration_screen.dart';
 import 'screens/login_screen.dart';
+import 'package:habit_buddy/screens/more_water_screen.dart';
 
 void main() => runApp(HabitBuddy());
 
@@ -29,6 +30,7 @@ class HabitBuddy extends StatelessWidget {
             Friends.id: (context) => Friends(),
             ExampleHabit.id: (context) => ExampleHabit(),
             AddHabit.id: (context) => AddHabit(),
+            MoreWater.id: (context) => MoreWater(),
           }),
     );
   }
