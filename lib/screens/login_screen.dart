@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Icon(
                       Icons.child_care,
                       size: 90.0,
-                      color: Colors.redAccent,
+                      color: Color(0xFFFF4081),
                     ),
                   ),
                 ),
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               RoundedButton(
                 title: 'Log In',
-                colour: Colors.lightBlueAccent,
+                colour: Color(0xFF303f9f),
                 onPressed: () async {
                   setState(() {
                     showSpinner = true;

@@ -5,7 +5,7 @@ import 'package:habit_buddy/components/motivation_streak.dart';
 import 'package:habit_buddy/components/emotes_button.dart';
 
 class FriendCard extends StatelessWidget {
-  FriendCard({@required this.friendAvatar, this.onPress, this.friendName});
+  FriendCard({this.friendAvatar, @required this.onPress, this.friendName});
   final String friendAvatar;
   final Function onPress;
   final String friendName;

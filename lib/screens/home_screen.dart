@@ -6,7 +6,7 @@ import 'package:habit_buddy/screens/add_habit_screen.dart';
 import 'package:habit_buddy/components/reusable_card.dart';
 import 'package:habit_buddy/constants.dart';
 import 'package:habit_buddy/screens/habit_screen.dart';
-import 'package:habit_buddy/screens/friends.dart';
+import 'package:habit_buddy/screens/habit_buddy_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color(0xFFFF4081),
         onPressed: () {
 //          Provider.of<GoalData>(context, listen: false).addGoal('Test');
           Navigator.pushNamed(
@@ -34,9 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
 //          Header
           Container(
-            color: Colors.lightBlue,
-            padding: EdgeInsets.only(
-                top: 60.0, bottom: 30.0),
+            color: Color(0xFF303F9F),
+            padding: EdgeInsets.only(top: 60.0, bottom: 30.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -44,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Icon(
                     Icons.child_care,
                     size: 30.0,
-                    color: Colors.redAccent,
+                    color: Color(0xFFFF4081),
                   ),
                   backgroundColor: Colors.white,
                   radius: 30.0,
@@ -66,16 +65,19 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              SizedBox(
+                height: 15,
+              ),
               ReusableCard(
-                color: Colors.redAccent,
+                color: Color(0xFFFF4081),
                 onPress: () {
-                  Navigator.pushNamed(context, Friends.id);
+                  Navigator.pushNamed(context, HabitBuddyScreen.id);
                 },
                 cardChild: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Text(
-                      'Motiviere Dich und Deine Habit Buddies!',
+                      'Motiviere Dich und Deinen Habit Buddy!',
                       style: TextStyle(color: Colors.white),
                     ),
                     Hero(
@@ -97,7 +99,11 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.only(left: 15, right: 15, bottom: 10),
             color: Colors.white,
             child: Text(
-                'Derzeit verfolgst Du ${Provider.of<GoalData>(context).goalCount} Ziele, bleib dran und wachse an Dir!'),
+              'Derzeit verfolgst Du ${Provider.of<GoalData>(context).goalCount} Ziele, bleib dran und wachse an Dir!',
+              style: TextStyle(
+                color: Color(0xFF212121),
+              ),
+            ),
           ),
           Expanded(
             child: Container(

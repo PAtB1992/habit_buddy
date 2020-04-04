@@ -3,7 +3,7 @@ import 'package:habit_buddy/screens/add_habit_screen.dart';
 import 'package:habit_buddy/screens/habit_screen.dart';
 import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
-import 'screens/friends.dart';
+import 'screens/habit_buddy_screen.dart';
 import 'screens/habit_screen.dart';
 import 'components/goal_data.dart';
 import 'screens/add_habit_screen.dart';
@@ -20,6 +20,7 @@ class HabitBuddy extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => GoalData(),
       child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Habit Buddy',
           initialRoute: WelcomeScreen.id,
           routes: {
@@ -27,7 +28,7 @@ class HabitBuddy extends StatelessWidget {
             LoginScreen.id: (context) => LoginScreen(),
             RegistrationScreen.id: (context) => RegistrationScreen(),
             HomeScreen.id: (context) => HomeScreen(),
-            Friends.id: (context) => Friends(),
+            HabitBuddyScreen.id: (context) => HabitBuddyScreen(),
             ExampleHabit.id: (context) => ExampleHabit(),
             AddHabit.id: (context) => AddHabit(),
             MoreWater.id: (context) => MoreWater(),

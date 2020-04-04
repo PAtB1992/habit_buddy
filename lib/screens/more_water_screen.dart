@@ -29,7 +29,7 @@ class MoreWater extends StatelessWidget {
               onPressed: () async {
                 var habitTemplate =
                     await getHabitTemplate('mehr-wasser-trinken');
-                print(habitTemplate);
+//                print(habitTemplate);
                 Provider.of<GoalData>(context, listen: false)
                     .addGoal(habitTemplate[0], habitTemplate[1]);
                 Navigator.pushNamed(context, HomeScreen.id);

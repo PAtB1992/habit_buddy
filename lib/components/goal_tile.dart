@@ -13,7 +13,7 @@ class GoalTile extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        padding: EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(10.0),
         child: Column(
           children: <Widget>[
             Text(
@@ -43,9 +43,9 @@ class GoalTile extends StatelessWidget {
             ),
           ],
         ),
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.all(5.0),
         decoration: BoxDecoration(
-          color: Colors.lightBlue,
+          color: Color(0xFF3F51b5),
           borderRadius: BorderRadius.circular(10.0),
         ),
       ),
