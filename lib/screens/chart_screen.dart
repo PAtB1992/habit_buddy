@@ -7,7 +7,8 @@ class ChartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ReusableCard(
-        color: Color(0xFF303f9f),
+        color1: Color(0xFF303f9f),
+        color2: Color(0xFF3f51b5),
         cardChild: Column(
           children: <Widget>[
             Flexible(child: SimpleLineChart.withRandomData()),

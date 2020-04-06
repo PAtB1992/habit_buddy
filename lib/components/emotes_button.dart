@@ -22,28 +22,26 @@ class EmoteButtons extends StatelessWidget {
         _firestore
             .collection('messages')
             .add({'text': title, 'sender': loggedInUser.email});
-        Navigator.pop(context);
+//        Navigator.pop(context);
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Ink(
+      child: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [Colors.lightBlue, Colors.lightBlueAccent],
+              colors: [Color(0xFFc5cae9), Color(0xFFc5cae9)],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Container(
-          constraints: BoxConstraints(maxWidth: 400, minHeight: 50),
-          alignment: Alignment.center,
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style:
-                TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
-          ),
+        constraints: BoxConstraints(maxWidth: 120, minHeight: 45),
+        alignment: Alignment.center,
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              color: Color(0xFF212121), fontWeight: FontWeight.normal),
         ),
       ),
     );

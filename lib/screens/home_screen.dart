@@ -69,7 +69,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 15,
               ),
               ReusableCard(
-                color: Color(0xFFFF4081),
+                color1: Color(0xFFFF4081),
+                color2: Color(0xFFFF4081),
                 onPress: () {
                   Navigator.pushNamed(context, HabitBuddyScreen.id);
                 },

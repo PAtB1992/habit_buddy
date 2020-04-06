@@ -13,13 +13,9 @@ class _MotivationStreakState extends State<MotivationStreak> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          'Motivation Level:',
-          style: TextStyle(fontSize: 15),
-        ),
-        Icon(Icons.favorite, color: Colors.redAccent),
-        Icon(Icons.favorite, color: Colors.redAccent),
-        Icon(Icons.favorite, color: Colors.redAccent),
+        Icon(Icons.favorite, color: Color(0xFFFF4081)),
+        Icon(Icons.favorite, color: Color(0xFFFF4081)),
+        Icon(Icons.favorite, color: Color(0xFFFF4081)),
       ],
     );
   }

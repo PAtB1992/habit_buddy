@@ -48,7 +48,7 @@ class _HabitBuddyScreenState extends State<HabitBuddyScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Row(
@@ -83,7 +83,7 @@ class _HabitBuddyScreenState extends State<HabitBuddyScreen> {
               ],
             ),
             Container(
-              height: 250,
+              height: 350,
               child: PageView(
                 controller: controller,
                 children: <Widget>[
@@ -95,33 +95,28 @@ class _HabitBuddyScreenState extends State<HabitBuddyScreen> {
             MessagesStream(
               loggedInUser: loggedInUser,
             ),
-            ReusableCard(
-              onPress: () {
-                showModalBottomSheet(
-                  context: context,
-                  builder: (context) => Container(
-                    child: SendMessageScreen(),
-                  ),
-                );
-              },
-              color: Color(0xFFFF4081),
-              cardChild: Text(
-                'Schicke deinem Habit Buddy eine Nachricht.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            )
+//            ReusableCard(
+//              onPress: () {
+//                showModalBottomSheet(
+//                  context: context,
+//                  builder: (context) => Container(
+//                    child: SendMessageScreen(),
+//                  ),
+//                );
+//              },
+//              color1: Color(0xFFFF4081),
+//              color2: Color(0xFFFF4081),
+//              cardChild: Text(
+//                'Schicke deinem Habit Buddy eine Nachricht.',
+//                textAlign: TextAlign.center,
+//                style: TextStyle(
+//                  color: Colors.white,
+//                ),
+//              ),
+//            )
           ],
         ),
       ),
     );
   }
-}
-
-class SalesData {
-  SalesData(this.year, this.sales);
-  final String year;
-  final double sales;
 }
