@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_buddy/screens/add_habit_screen.dart';
+import 'package:habit_buddy/screens/habit_detail_screen.dart';
 import 'package:habit_buddy/screens/habit_screen.dart';
 import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
@@ -29,6 +30,7 @@ class HabitBuddy extends StatelessWidget {
             RegistrationScreen.id: (context) => RegistrationScreen(),
             HomeScreen.id: (context) => HomeScreen(),
             HabitBuddyScreen.id: (context) => HabitBuddyScreen(),
+            HabitDetailScreen.id: (context) => HabitDetailScreen(),
             ExampleHabit.id: (context) => ExampleHabit(),
             AddHabit.id: (context) => AddHabit(),
             MoreWater.id: (context) => MoreWater(),
