@@ -12,6 +12,7 @@ import 'screens/welcome_screen.dart';
 import 'screens/registration_screen.dart';
 import 'screens/login_screen.dart';
 import 'package:habit_buddy/screens/more_water_screen.dart';
+import 'package:habit_buddy/services/notifications_service.dart';
 
 void main() => runApp(HabitBuddy());
 

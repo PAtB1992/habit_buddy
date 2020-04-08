@@ -39,6 +39,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             Row(
               children: <Widget>[
+//                TODO Buddy Zustandstext muss sich anpassen
                 Flexible(
                   child: RichText(
                     text: TextSpan(

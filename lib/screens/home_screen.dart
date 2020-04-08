@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habit_buddy/Widgets/goals_list.dart';
+import 'package:habit_buddy/services/notifications_service.dart';
 import 'package:provider/provider.dart';
 import 'package:habit_buddy/components/goal_data.dart';
 import 'package:habit_buddy/screens/add_habit_screen.dart';
@@ -7,6 +8,7 @@ import 'package:habit_buddy/components/reusable_card.dart';
 import 'package:habit_buddy/constants.dart';
 import 'package:habit_buddy/screens/habit_screen.dart';
 import 'package:habit_buddy/screens/habit_buddy_screen.dart';
+import 'package:habit_buddy/services/notifications_service.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -16,6 +18,11 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
+  void initState() {
+    super.initState();
+    NotificationsService().initialise();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
